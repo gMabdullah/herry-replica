@@ -1,0 +1,31 @@
+/* Footer */
+.gry-bg {
+    background-color: #E6E6E6;
+    border-top: 1px solid;
+}
+.footer h6 {
+	color: #7F7F7F;
+	text-transform: capitalize;
+	font-size: 1em;
+	font-weight: 600;
+}
+.footer p {
+    color: #7F7F7F;
+    line-height: 1.5em;
+    word-spacing: 3px;
+}
+.ftr-lnk {
+    list-style: none;
+}
+.ftr-lnk li {
+    float: left;
+    margin-right: 25px;
+    color: #7F7F7F;
+    font-size: 13px;
+}
+.blu-bg {
+    background-color: #263645;
+    color: #fff;
+    display: table;
+    padding: 50px 45px 45px 45px;
+}

