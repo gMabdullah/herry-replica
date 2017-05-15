@@ -26,10 +26,10 @@
 	
 </head>
 <body>
-	<?php include_once('inc/nav.php'); ?>
+	<?php include('inc/nav.php'); ?>
 
 	<!-- CONTAINER -->
-	<div class="container-fluid gry-bg">
+	<div class="container-fluid gry-bg" style='border-top:none;'>
 	  <div class="row profile">
 	  <!-- col-md-3 -->
 			<div class="col-md-3">
@@ -53,28 +53,11 @@
 
 					<!-- SIDEBAR MENU -->
 					<div class="profile-usermenu">
-						<ul class="nav nav-pills">
-							<li>
-								<a href="all-products.php">
-								<i class="glyphicon glyphicon-home"></i>
-								All Products </a>
-							</li>
-							<li class="active">
-								<a href="#">
-								<i class="glyphicon glyphicon-user"></i>
-								Account Settings </a>
-							</li>
-							<li>
-								<a href="#" target="_blank">
-								<i class="glyphicon glyphicon-ok"></i>
-								Tasks </a>
-							</li>
-							<li>
-								<a href="logout.php">
-								<i class="glyphicon glyphicon-flag"></i>
-								Logout </a>
-							</li>
-						</ul>
+						<ul class="nav nav-tabs nav-stacked">
+					    <li class="active"><a href="#profile">Profile</a></li> 
+					    <li><a href="all-products.php">All Product</a></li>
+					    <li><a href="logout.php">Logout</a></li>
+					  </ul>
 					</div>
 					<!-- END MENU -->
 				</div>
@@ -145,8 +128,9 @@
 		          <input type="pass" class="form-control" name="pass" id="user-pass" value="<?php echo $pass; ?>" required >
 		        </div>
 		        <!-- Profile image -->
-		        <input type="file" name="image">
-		        <input type="submit" name="update" value="Update" class="btn btn-primary">
+		        <input type="file" name="image" class="form-control">
+						<br>
+		        <input type="submit" name="update" value="Update" class="btn btn-primary form-control">
 					</form>
 
         </div>

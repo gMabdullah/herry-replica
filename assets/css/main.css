@@ -118,6 +118,11 @@
   text-transform: uppercase;
   font-weight: 600;
 }
+
+.navbar-right {
+    margin-right: -30px;
+}
+
 /*Main page banner*/
 .mainpg-bg {
   background-color: #d1d1d1;

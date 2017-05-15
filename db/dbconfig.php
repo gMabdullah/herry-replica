@@ -13,11 +13,17 @@
 	//     $db => 'signup' 
 	// );
 	
-	$server = 'localhost';
-	$username = 'root';
-	$password = 'root';
-	$db = 'signup';
-	
+	// $server = 'localhost';
+	// $username = 'root';
+	// $password = 'root';
+	// $db = 'signup';
+
+	// infinity.net server config.
+	$server = 'sql209.rf.gd';
+	$username = 'rfgd_20102755';
+	$password = 'subhanALLAH';
+	$db = 'rfgd_20102755_signup';
+
 	try{
 		
 		$db_con = new PDO("mysql:host={$server};dbname={$db}",$username, $password);

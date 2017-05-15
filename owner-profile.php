@@ -20,6 +20,7 @@
 	<link rel="stylesheet" href="assets/css/bootstrap.min.css">
 	
 	<!-- Custom CSS -->
+	<link rel="stylesheet" href="assets/css/main.css">
 	<link rel="stylesheet" href="assets/css/user_profile.css">
 	<!-- <link rel="stylesheet" href="css/bootstrap-imageupload.min.css"> -->
 	
@@ -50,28 +51,11 @@
 
 					<!-- SIDEBAR MENU -->
 					<div class="profile-usermenu">
-						<ul class="nav nav-pills">
-							<li>
-								<a href="products.php">
-								<i class="glyphicon glyphicon-home"></i>
-								Products </a>
-							</li>
-							<li class="active">
-								<a href="#">
-								<i class="glyphicon glyphicon-user"></i>
-								Account Settings </a>
-							</li>
-							<li>
-								<a href="#" target="_blank">
-								<i class="glyphicon glyphicon-ok"></i>
-								Tasks </a>
-							</li>
-							<li>
-								<a href="logout.php">
-								<i class="glyphicon glyphicon-flag"></i>
-								Logout </a>
-							</li>
-						</ul>
+						<ul class="nav nav-tabs nav-stacked">
+					    <li class="active"><a data-toggle="tab" href="#profile">Profile</a></li> 
+					    <li><a data-toggle="tab" href="#creat-pro">Create Product</a></li>
+					    <li><a href="logout.php">Logout</a></li>
+					  </ul>
 					</div>
 					<!-- END MENU -->
 				</div>
@@ -124,65 +108,74 @@
 							$e->getMessage();
 						}
          ?>
-					
-	        <form action="owner-profile.php" method="post" name="account-info" enctype="multipart/form-data">
-	        	<h4> Update Account Information: </h4>
-						<div class="form-group">
-		          <label for="user-name" class="form-control-label">Username: </label>
-		          <input type="text" class="form-control" name="uname" id="user-name" value="<?php echo $uname; ?>" required >
-		        </div>
+					<div class="tab-content">
+						<div id="profile" class="tab-pane fade in active">
+		        <form action="owner-profile.php" method="post" name="account-info" enctype="multipart/form-data">
+		        	<h4> Update Account Information: </h4>
+							<div class="form-group">
+			          <label for="user-name" class="form-control-label">Username: </label>
+			          <input type="text" class="form-control" name="uname" id="user-name" value="<?php echo $uname; ?>" required >
+			        </div>
 
-		        <div class="form-group">
-		          <label for="user-email" class="form-control-label">Email :</label>
-		          <input type="email" class="form-control" name="email" id="user-email" value="<?php echo $email; ?>" required >
-		        </div>
+			        <div class="form-group">
+			          <label for="user-email" class="form-control-label">Email :</label>
+			          <input type="email" class="form-control" name="email" id="user-email" value="<?php echo $email; ?>" required >
+			        </div>
 
-		        <div class="form-group">
-		          <label for="user-pass" class="form-control-label">Password :</label>
-		          <input type="pass" class="form-control" name="pass" id="user-pass" value="<?php echo $pass; ?>" required >
-		        </div>
-		        <!-- Profile image -->
-		        <input type="file" name="image">
-		        <input type="submit" name="update" value="Update" class="btn btn-primary">
-					</form>
-
-					<!-- create product  -->
-					<form action="create-product.php" method="post" name="create-product" enctype="multipart/form-data">
-	        	<h4> Create Products </h4>
-	        	<!-- Title -->
-						<div class="form-group">
-		          <label for="title" class="form-control-label">Title: </label>
-		          <input type="text" class="form-control" name="title" id="title" value="" required >
-		        </div>
-						<!-- Description -->
-		        <div class="form-group">
-		          <label for="body" >Description :</label>
-		          <textarea name="body" class="form-control" id="" rows="4">
-		          	
-		          </textarea>
-		        </div>
-						<!-- Price -->
-		        <div class="form-group col-xs-3">
-		          <label for="price" >Price :</label>
-		          <input type="pass" class="form-control" name="price" value="" required  >
-		        </div>
-		        <!-- Quantity -->
-						<div class="col-xs-2">
-							<label for="quantity">Quantity: </label>
-							<input type="number" class="form-control" name="quantity" min="1" maxlength="2" >
+			        <div class="form-group">
+			          <label for="user-pass" class="form-control-label">Password :</label>
+			          <input type="pass" class="form-control" name="pass" id="user-pass" value="<?php echo $pass; ?>" required >
+			        </div>
+			        <!-- Profile image -->
+			        <input type="file" name="image">
+			        <br>
+			        <input type="submit" name="update" value="Update" class="btn btn-primary">
+						</form>
 						</div>
-		        <!-- Color -->
-		        <label for="color">Color :</label>
-		        <label class="radio-inline"><input type="radio" name="color" value="orange" >Orange</label>
-						<label class="radio-inline"><input type="radio" name="color" value="blue" >Blue</label>
-						<label class="radio-inline"><input type="radio" name="color" value="green" >Green</label>
-						
-						<!-- image upload -->
-						<input type="file" name="image">
-
-		        <input type="submit" name="create-product" value="Create Product" class="btn btn-primary">
-					</form>
-					<!-- /create product  -->
+						<!-- create product  -->
+						<div id="creat-pro" class="tab-pane fade">
+						<form action="create-product.php" method="post" name="create-product" enctype="multipart/form-data">
+		        	<h4> Create Products </h4>
+		        	<!-- Title -->
+							<div class="form-group">
+			          <label for="title" class="form-control-label">Title: </label>
+			          <input type="text" class="form-control" name="title" id="title" value="" required >
+			        </div>
+							<!-- Description -->
+			        <div class="form-group">
+			          <label for="body" >Description :</label>
+			          <textarea name="body" class="form-control" id="" rows="4">
+			          	
+			          </textarea>
+			        </div>
+							<!-- Price -->
+			        <div class="form-group col-xs-3">
+			          <label for="price" >Price :</label>
+			          <input type="pass" class="form-control" name="price" value="" required  >
+			        </div>
+			        <!-- Quantity -->
+							<div class="col-xs-2">
+								<label for="quantity">Quantity: </label>
+								<input type="number" class="form-control" name="quantity" min="1" maxlength="2" >
+							</div>
+							<div class="col-xs-7">
+			        <!-- Color -->
+			        <label for="color">Color :</label>
+			        <label class="radio-inline"><input type="radio" name="color" value="orange" >Orange</label>
+							<label class="radio-inline"><input type="radio" name="color" value="blue" >Blue</label>
+							<label class="radio-inline"><input type="radio" name="color" value="green" >Green</label>
+							</div>
+							<div class="col-xs-12">
+							<!-- image upload -->
+							<input type="file" name="image">
+							</div>
+							<div class="col-xs-12 mg-t10">
+			        <input type="submit" name="create-product" value="Create Product" class="btn btn-primary">
+			        </div>
+						</form>
+						</div>
+						<!-- /create product  -->
+					</div>
         </div>
 			</div>
 			<!-- /col-md-9 -->

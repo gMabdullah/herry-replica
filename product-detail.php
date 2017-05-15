@@ -185,11 +185,11 @@
                 <!-- quantity -->
                 <input type="number" class="col-xs-2 col-md-3" name="quantity" value="1" size="2" min="1" max="100" />
             </div>                
-            
+            <br>
             <!-- Buy Button -->
             <div class="section" style="padding-bottom:20px;">
               <button class="btn btn-success" type="submit">
-                <span style="margin-right:20px;" class="glyphicon glyphicon-shopping-cart" aria-hidden="true"></span>
+                <span style="margin-right:20px;" class="fa fa-shopping-cart" aria-hidden="true"></span>
                 Add to Cart
               </button>
             </div>

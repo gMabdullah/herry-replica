@@ -94,7 +94,7 @@
 					<p>We do more than make razors, you know.</p>
 				</div>
 				<!-- more herry-1 -->
-				<div class="col-sm-6 col-md-3 col-md-offset-1">
+				<div class="col-sm-6 col-md-4">
 			    <div class="thumbnail">
 			      <img src="img/more-herry-1.jpg" alt="loading...">
 			      <div class="text-center">
@@ -104,7 +104,7 @@
 			    </div>
 			  </div>
 			  <!-- more herry-2 -->
-			  <div class="col-sm-6 col-md-3 col-md-offset-1">
+			  <div class="col-sm-6 col-md-4">
 			    <div class="thumbnail">
 			      <img src="img/more-herry-2.jpg" alt="loading...">
 			      <div class="text-center">
@@ -114,7 +114,7 @@
 			    </div>
 			  </div>
 			  <!-- more herry-3 -->
-			  <div class="col-sm-6 col-md-3 col-md-offset-1">
+			  <div class="col-sm-6 col-md-4">
 			    <div class="thumbnail">
 			      <img src="img/more-herry-3.jpg" alt="loading...">
 			      <div class="text-center">
